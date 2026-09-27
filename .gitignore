@@ -1,0 +1,9 @@
+node_modules
+dist
+.vercel
+.netlify
+.env
+.env.*
+*.local
+.DS_Store
+raw-images

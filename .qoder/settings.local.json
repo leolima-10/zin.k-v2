@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npm i -D sharp --no-fund --no-audit && npm run images && ls -la public/images/projects)",
+      "Bash(ls \"/c/Program Files \\(x86\\)/Microsoft/Edge/Application/msedge.exe\" 2>/dev/null; ls \"/c/Program Files/Google/Chrome/Application/chrome.exe\" 2>/dev/null; ls \"/c/Program Files \\(x86\\)/Google/Chrome/Application/chrome.exe\" 2>/dev/null; echo done)",
+      "Read(//c/Program Files \\(x86\\)/Microsoft/Edge/Application/**)",
+      "Bash(mkdir -p .screenshots && \"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --dump-dom --virtual-time-budget=6000 http://localhost:5173/ > .screenshots/dom-home.html 2>/dev/null; grep -o \"sites e soluções digitais sob medida\" .screenshots/dom-home.html | head -2; grep -o \"nordal arquitetura\" .screenshots/dom-home.html | head -2; grep -o \"aceitando novos projetos\" .screenshots/dom-home.html | head -1)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --dump-dom --virtual-time-budget=6000 http://localhost:5173/projetos/pulse > .screenshots/dom-pulse.html 2>/dev/null; grep -c -o \"a solução\\\\|o problema\\\\|resultados\\\\|Stripe\\\\|React\" .screenshots/dom-pulse.html; grep -o \"ver projeto online\" .screenshots/dom-pulse.html | head -1; echo \"---\"; grep -o \"<h1[^>]*>[^<]*</h1>\" .screenshots/dom-pulse.html)",
+      "Bash(rm -rf .screenshots && ls -A)"
+    ]
+  }
+}
