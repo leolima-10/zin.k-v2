@@ -1,17 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  /* paleta zin.k — dark mode é o tema padrão e único */
-  --color-ink: #0a0a0b;
-  --color-surface: #141416;
-  --color-surface-2: #1c1c1f;
-  --color-cream: #f5f5f5;
-  --color-accent: #8b5cf6;
-  /* roxo mais claro para texto/ícones pequenos: contraste AA sobre o preto */
-  --color-accent-text: #a78bfa;
+  /* paleta zin.k V1.0 */
+  --color-ink: #121212;
+  --color-surface: #171717;
+  --color-surface-2: #1f1f1f;
+  --color-cream: #fff9e5;
+  --color-fog: #d3d3d3;
+  --color-accent: #4400d6;
+  /* tom claro do roxo p/ texto pequeno/ícones — 4,58:1 sobre #121212 (AA) */
+  --color-accent-text: #9166dc;
 
-  --font-display: "Space Grotesk Variable", ui-sans-serif, system-ui, sans-serif;
-  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Unbounded Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "DM Sans Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, monospace;
 }
 
 @layer base {
@@ -35,7 +37,7 @@
 
   ::selection {
     background-color: var(--color-accent);
-    color: #fff;
+    color: var(--color-cream);
   }
 
   :focus-visible {
@@ -46,7 +48,7 @@
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 font-display text-sm font-semibold text-white transition-all duration-300 hover:bg-accent/85 hover:shadow-[0_0_32px_rgba(139,92,246,0.4)] active:scale-[0.98];
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 font-display text-sm font-semibold text-cream transition-all duration-300 hover:bg-accent/85 hover:shadow-[0_0_32px_rgba(68,0,214,0.4)] active:scale-[0.98];
   }
 
   .btn-secondary {
