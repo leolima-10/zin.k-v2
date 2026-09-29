@@ -95,7 +95,7 @@ export function Portfolio() {
               >
                 <Link
                   to={`/projetos/${project.slug}`}
-                  className="group block h-full overflow-hidden rounded-2xl border border-white/10 bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-accent/40"
+                  className="group block h-full overflow-hidden rounded-3xl border border-white/10 bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-accent/40"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <img
@@ -109,7 +109,7 @@ export function Portfolio() {
                       className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent"
                       aria-hidden="true"
                     />
-                    <span className="absolute left-4 top-4 rounded-full bg-ink/70 px-3 py-1 text-xs font-medium text-cream/85 backdrop-blur-sm">
+                    <span className="absolute left-4 top-4 rounded-3xl bg-ink/70 px-3 py-1 text-xs font-medium text-cream/85 backdrop-blur-sm">
                       {CATEGORY_LABELS[project.category]}
                     </span>
                   </div>
