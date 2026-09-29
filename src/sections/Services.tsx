@@ -29,7 +29,7 @@ const SERVICES = [
   {
     icon: LayoutDashboard,
     title: "sistemas web",
-    desc: "dashboards, portais e ferramentas internas que organizam sua operação e acabam com a planilha.",
+    desc: "dashboards, portais, CRM e ferramentas internas que organizam sua operação e acabam com a planilha.",
   },
   {
     icon: Wrench,
@@ -45,25 +45,26 @@ const SERVICES = [
 
 export function Services() {
   return (
-    <div className="bg-surface">
+    <div className="bg-cream text-ink">
       <Section
         id="servicos"
         eyebrow="o que oferecemos"
         title="do site ao sistema. tudo sob medida."
         description="a gente entra no seu problema e sai com a solução — seja uma landing page de campanha ou a plataforma que a sua equipe usa todo dia."
+        className="[&_p]:text-ink/70 [&_h2]:text-ink [&_.text-accent-text]:text-ink"
       >
         <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map(({ icon: Icon, title, desc }, i) => (
             <li key={title}>
               <Reveal delay={(i % 3) * 0.08} className="h-full">
-                <MotionCard>
+                <MotionCard tone="onLight">
                   <MotionCardIcon variant="fullRotate">
                     <Icon size={20} aria-hidden="true" />
                   </MotionCardIcon>
-                  <h3 className="mt-5 font-display text-lg font-semibold text-cream">
+                  <h3 className="mt-5 font-display text-lg font-semibold text-ink">
                     {title}
                   </h3>
-                  <p className="mt-2 text-sm/6 text-cream/55">{desc}</p>
+                  <p className="mt-2 text-sm/6 text-ink/60">{desc}</p>
                 </MotionCard>
               </Reveal>
             </li>

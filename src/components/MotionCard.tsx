@@ -5,6 +5,7 @@ import type { ReactNode } from "react";
 interface MotionCardProps {
   children: ReactNode;
   className?: string;
+  tone?: "dark" | "onLight";
 }
 
 /**
@@ -16,11 +17,16 @@ interface MotionCardProps {
 export function MotionCard({
   children,
   className = "",
+  tone = "dark",
 }: MotionCardProps) {
+  const base = "group h-full rounded-2xl border p-6 transition-all duration-300";
+  const darkStyles = "border-white/10 bg-surface-2";
+  const onLightStyles = "border-ink bg-ink text-cream";
+
   return (
     <motion.article
       whileHover={cardHover}
-      className={`group h-full rounded-2xl border border-white/10 bg-surface-2 p-6 transition-all duration-300 ${className}`}
+      className={`${base} ${tone === "onLight" ? onLightStyles : darkStyles} ${className}`}
     >
       {children}
     </motion.article>
