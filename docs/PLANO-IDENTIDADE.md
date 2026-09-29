@@ -7,5 +7,6 @@
 - [x] Fase 5: Seções — Hero, Pattern
 - [x] Fase 6.1: Serviços (creme, cards escuros, CRM na descrição)
 - [x] Fase 6.2: Portfólio — rounded-3xl nos cards e badge
-- [ ] Fase 6.3: Faixa "Vamos criar juntos" + Contato ajustes
+- [x] Fase 6.3: Processo — verificado (bg-surface, cores ok, gradientes já atualizados na Fase 4)
+- [ ] Fase 6.4: Faixa "Vamos criar juntos" + Contato ajustes
 - [ ] Fase 7: Build & Commit final — validação, commit único
