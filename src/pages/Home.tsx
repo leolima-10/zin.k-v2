@@ -4,6 +4,7 @@ import { About } from "../sections/About";
 import { Services } from "../sections/Services";
 import { Portfolio } from "../sections/Portfolio";
 import { Process } from "../sections/Process";
+import { CtaBand } from "../sections/CtaBand";
 import { Contact } from "../sections/Contact";
 import { pageVariants } from "../lib/animations/variants";
 
@@ -15,6 +16,7 @@ export function Home() {
       <Services />
       <Portfolio />
       <Process />
+      <CtaBand />
       <Contact />
     </motion.div>
   );

@@ -9,5 +9,5 @@
 - [x] Fase 6.2: Portfólio — rounded-3xl nos cards e badge
 - [x] Fase 6.3: Processo — verificado (bg-surface, cores ok, gradientes já atualizados na Fase 4)
 - [x] Fase 6.4: Contato — INPUT_CLASS border-cream/15, CHANNELS border-cream/10
-- [ ] Fase 6.5: Faixa "Vamos criar juntos"
+- [x] Fase 6.5: Faixa "Vamos criar juntos" (CtaBand.tsx) + Footer borders cream
 - [ ] Fase 7: Build & Commit final — validação, commit único

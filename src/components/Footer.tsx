@@ -21,7 +21,7 @@ const SOCIAL_LINKS = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10">
+    <footer className="border-t border-cream/10">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-5 py-12 sm:px-8 md:flex-row md:items-start md:justify-between">
         <div className="max-w-xs">
           <Logo />
@@ -62,7 +62,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   aria-label={label}
                   whileHover={iconHover}
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 text-cream/60 transition-colors hover:border-accent/50 hover:text-accent-text"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-cream/10 text-cream/60 transition-colors hover:border-accent/50 hover:text-accent-text"
                 >
                   <Icon size={18} aria-hidden="true" />
                 </motion.a>
@@ -72,7 +72,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/5">
+      <div className="border-t border-cream/5">
         <p className="mx-auto w-full max-w-6xl px-5 py-6 text-xs text-cream/40 sm:px-8">
           © {new Date().getFullYear()} zin.k — todos os direitos reservados.
         </p>
