@@ -8,5 +8,6 @@
 - [x] Fase 6.1: Serviços (creme, cards escuros, CRM na descrição)
 - [x] Fase 6.2: Portfólio — rounded-3xl nos cards e badge
 - [x] Fase 6.3: Processo — verificado (bg-surface, cores ok, gradientes já atualizados na Fase 4)
-- [ ] Fase 6.4: Faixa "Vamos criar juntos" + Contato ajustes
+- [x] Fase 6.4: Contato — INPUT_CLASS border-cream/15, CHANNELS border-cream/10
+- [ ] Fase 6.5: Faixa "Vamos criar juntos"
 - [ ] Fase 7: Build & Commit final — validação, commit único

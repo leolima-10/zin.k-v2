@@ -37,7 +37,7 @@ const CHANNELS = [
 ];
 
 const INPUT_CLASS =
-  "w-full rounded-xl border border-white/10 bg-ink px-4 py-3 text-sm text-cream placeholder:text-cream/30 transition-colors focus:border-accent focus:outline-none";
+  "w-full rounded-xl border border-cream/15 bg-ink px-4 py-3 text-sm text-cream placeholder:text-cream/30 transition-colors focus:border-accent focus:outline-none";
 
 const inputVariants = {
   initial: { boxShadow: "0 0 0 0 transparent" },
@@ -91,7 +91,7 @@ export function Contact() {
                     ? { target: "_blank", rel: "noopener noreferrer" }
                     : {})}
                   whileHover={{ x: 4, borderColor: "#4400d6" }}
-                  className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-surface p-5 transition-colors hover:border-accent/40"
+                  className="group flex items-center gap-4 rounded-2xl border border-cream/10 bg-surface p-5 transition-colors hover:border-accent/40"
                 >
                   <motion.span
                     whileHover={{ scale: 1.1, rotate: 6 }}
