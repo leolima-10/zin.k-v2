@@ -126,7 +126,7 @@ export function ProjectPage() {
                       <motion.li
                         key={highlight}
                         variants={staggerItem}
-                        whileHover={{ x: 8, color: "#a78bfa" }}
+                        whileHover={{ x: 8, color: "#9166dc" }}
                         className="flex items-start gap-3 text-base/8 text-cream/60"
                       >
                         <CheckCircle2
@@ -154,7 +154,7 @@ export function ProjectPage() {
                         key={tech}
                         variants={staggerItem}
                         className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs font-medium text-cream/70"
-                        whileHover={{ scale: 1.05, borderColor: "#8b5cf6", color: "#a78bfa" }}
+                        whileHover={{ scale: 1.05, borderColor: "#4400d6", color: "#9166dc" }}
                         transition={{ duration: 0.2 }}
                       >
                         {tech}
@@ -184,7 +184,7 @@ export function ProjectPage() {
                       href={project.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      whileHover={{ scale: 1.02, boxShadow: "0 0 24px rgba(139, 92, 246, 0.2)" }}
+                      whileHover={{ scale: 1.02, boxShadow: "0 0 24px rgba(68, 0, 214, 0.2)" }}
                       className="btn-secondary mt-6 w-full"
                     >
                       ver projeto online
@@ -196,7 +196,7 @@ export function ProjectPage() {
 
               <Reveal delay={0.1}>
                 <motion.div
-                  whileHover={{ scale: 1.02, boxShadow: "0 0 32px rgba(139, 92, 246, 0.3)", borderColor: "#8b5cf6" }}
+                  whileHover={{ scale: 1.02, boxShadow: "0 0 32px rgba(68, 0, 214, 0.3)", borderColor: "#4400d6" }}
                   className="rounded-2xl border border-accent/30 bg-accent/10 p-6 transition-all duration-300"
                 >
                   <h2 className="font-display text-lg font-semibold text-cream">

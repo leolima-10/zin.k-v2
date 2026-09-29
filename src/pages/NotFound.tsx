@@ -109,7 +109,7 @@ export function NotFound() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-2 font-display text-4xl font-bold text-cream sm:text-5xl relative z-10"
         >
-          essa página não existe<span className="text-accent">.</span>
+          essa página não existe<span className="text-accent-text">.</span>
         </motion.h1>
 
         <motion.p
@@ -130,7 +130,7 @@ export function NotFound() {
         >
           <motion.a
             href="/"
-            whileHover={{ scale: 1.02, boxShadow: "0 0 32px rgba(139, 92, 246, 0.4)" }}
+            whileHover={{ scale: 1.02, boxShadow: "0 0 32px rgba(68, 0, 214, 0.4)" }}
             whileTap={{ scale: 0.98 }}
             className="btn-primary mt-8 inline-flex"
           >

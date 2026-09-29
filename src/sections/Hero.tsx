@@ -121,7 +121,7 @@ export function Hero() {
           <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             zin
           </motion.span>
-          <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-accent">
+          <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-accent-text">
             .
           </motion.span>
           <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }}>

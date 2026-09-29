@@ -41,7 +41,7 @@ const INPUT_CLASS =
 
 const inputVariants = {
   initial: { boxShadow: "0 0 0 0 transparent" },
-  focus: { boxShadow: "0 0 0 3px rgba(139, 92, 246, 0.3)" },
+  focus: { boxShadow: "0 0 0 3px rgba(68, 0, 214, 0.3)" },
 };
 
 interface ContactFormState {
@@ -90,7 +90,7 @@ export function Contact() {
                   {...(external
                     ? { target: "_blank", rel: "noopener noreferrer" }
                     : {})}
-                  whileHover={{ x: 4, borderColor: "#8b5cf6" }}
+                  whileHover={{ x: 4, borderColor: "#4400d6" }}
                   className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-surface p-5 transition-colors hover:border-accent/40"
                 >
                   <motion.span

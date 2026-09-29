@@ -27,7 +27,7 @@ export function MotionButton({
     "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-display text-sm font-semibold transition-colors duration-300";
 
   const variants = {
-    primary: "bg-accent text-white hover:bg-accent/85 hover:shadow-[0_0_32px_rgba(139,92,246,0.4)]",
+    primary: "bg-accent text-cream hover:bg-accent/85 hover:shadow-[0_0_32px_rgba(68,0,214,0.4)]",
     secondary: "border border-white/15 bg-white/[0.03] text-cream hover:border-accent/60 hover:text-white",
     ghost: "text-cream/60 hover:text-cream hover:bg-white/5",
   };

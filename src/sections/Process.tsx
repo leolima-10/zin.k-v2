@@ -62,8 +62,8 @@ function ProcessLine() {
       />
       <defs>
         <linearGradient id="process-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#8b5cf6" stopOpacity="0.6" />
-          <stop offset="100%" stopColor="#a78bfa" stopOpacity="0.3" />
+          <stop offset="0%" stopColor="#4400d6" stopOpacity="0.6" />
+          <stop offset="100%" stopColor="#9166dc" stopOpacity="0.3" />
         </linearGradient>
       </defs>
     </motion.svg>
@@ -99,8 +99,8 @@ function ProcessLineMobile() {
       />
       <defs>
         <linearGradient id="process-gradient-mobile" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#8b5cf6" stopOpacity="0.6" />
-          <stop offset="100%" stopColor="#a78bfa" stopOpacity="0.3" />
+          <stop offset="0%" stopColor="#4400d6" stopOpacity="0.6" />
+          <stop offset="100%" stopColor="#9166dc" stopOpacity="0.3" />
         </linearGradient>
       </defs>
     </motion.svg>
@@ -127,7 +127,7 @@ export function Process() {
               <li key={number} className="relative">
                 <Reveal delay={i * 0.08} className="h-full">
                   <MotionCard>
-                    <p className="font-display text-4xl font-bold text-accent">
+                    <p className="font-display text-4xl font-bold text-accent-text">
                       {number}
                     </p>
                     <h3 className="mt-4 font-display text-lg font-semibold text-cream">

@@ -5,7 +5,7 @@ import { motion, useReducedMotion } from "framer-motion";
  */
 export function LoadingSpinner({
   size = 48,
-  color = "#8b5cf6",
+  color = "#4400d6",
   thickness = 3,
   className = "",
 }: {

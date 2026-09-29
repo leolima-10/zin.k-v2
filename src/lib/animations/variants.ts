@@ -142,7 +142,7 @@ export const navLinkHover = { y: -2 };
  * Variantes para input focus
  */
 export const inputFocus = {
-  boxShadow: "0 0 0 3px rgba(139, 92, 246, 0.2)",
+  boxShadow: "0 0 0 3px rgba(68, 0, 214, 0.2)",
   transition: { duration: durations.fast },
 };
 
