@@ -2,6 +2,7 @@ import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion
 import { Link } from "react-router-dom";
 import { ArrowDown, ArrowRight } from "lucide-react";
 import { gradientOrbVariants, scrollIndicatorVariants } from "../lib/animations/variants";
+import { Pattern } from "../components/Pattern";
 
 /**
  * Partículas CSS flutuantes no fundo do Hero.
@@ -70,6 +71,8 @@ export function Hero() {
     >
       {/* Background com gradientes animados + partículas + grid */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+        {/* Pattern: grade + círculos decorativos */}
+        <Pattern />
         {/* Orb 1 - animado + parallax */}
         <motion.div
           className="absolute -top-40 right-[-12%] h-[520px] w-[520px] rounded-full bg-accent/20 blur-[140px]"
