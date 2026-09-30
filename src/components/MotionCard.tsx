@@ -57,19 +57,25 @@ interface MotionCardIconProps {
   children: ReactNode;
   className?: string;
   variant?: "default" | "fullRotate";
+  tone?: "dark" | "light";
 }
 
 export function MotionCardIcon({
   children,
   className = "",
   variant = "default",
+  tone = "light",
 }: MotionCardIconProps) {
   const hoverVariant = variant === "fullRotate" ? iconHoverFullRotate : iconHover;
+  const iconStyles =
+    tone === "dark"
+      ? "bg-accent/20 text-cream"
+      : "bg-accent/12 text-accent-text";
 
   return (
     <motion.span
       whileHover={hoverVariant}
-      className={`inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent/12 text-accent-text transition-colors ${className}`}
+      className={`inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl transition-colors ${iconStyles} ${className}`}
     >
       {children}
     </motion.span>

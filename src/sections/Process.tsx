@@ -133,7 +133,7 @@ export function Process() {
                     <h3 className="mt-4 font-display text-lg font-semibold text-cream">
                       {title}
                     </h3>
-                    <p className="mt-2 text-sm/6 text-cream/55">{desc}</p>
+                    <p className="mt-2 text-sm/6 text-cream/70">{desc}</p>
                   </MotionCard>
                 </Reveal>
               </li>

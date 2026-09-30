@@ -118,7 +118,7 @@ export function Portfolio() {
                       <h3 className="font-display text-lg font-semibold text-cream transition-colors group-hover:text-white">
                         {project.title}
                       </h3>
-                      <p className="mt-1 text-sm/6 text-cream/55">
+                      <p className="mt-1 text-sm/6 text-cream/70">
                         {project.tagline}
                       </p>
                     </div>

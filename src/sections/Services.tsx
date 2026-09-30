@@ -58,13 +58,13 @@ export function Services() {
             <li key={title}>
               <Reveal delay={(i % 3) * 0.08} className="h-full">
                 <MotionCard tone="onLight">
-                  <MotionCardIcon variant="fullRotate">
+                  <MotionCardIcon variant="fullRotate" tone="dark">
                     <Icon size={20} aria-hidden="true" />
                   </MotionCardIcon>
-                  <h3 className="mt-5 font-display text-lg font-semibold text-ink">
+                  <h3 className="mt-5 font-display text-lg font-semibold text-cream">
                     {title}
                   </h3>
-                  <p className="mt-2 text-sm/6 text-ink/60">{desc}</p>
+                  <p className="mt-2 text-sm/6 !text-cream/70">{desc}</p>
                 </MotionCard>
               </Reveal>
             </li>

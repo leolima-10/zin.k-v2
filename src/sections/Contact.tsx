@@ -95,7 +95,7 @@ export function Contact() {
                 >
                   <motion.span
                     whileHover={{ scale: 1.1, rotate: 6 }}
-                    className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent/12 text-accent-text"
+                    className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent/20 text-cream"
                   >
                     <Icon size={20} aria-hidden="true" />
                   </motion.span>
@@ -103,7 +103,7 @@ export function Contact() {
                     <span className="block font-display text-base font-semibold text-cream">
                       {title}
                     </span>
-                    <span className="block text-sm text-cream/50">
+                    <span className="block text-sm text-cream/70">
                       {detail}
                     </span>
                   </span>

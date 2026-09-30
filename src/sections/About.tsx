@@ -41,13 +41,13 @@ export function About() {
           <li key={title}>
             <Reveal delay={i * 0.08} className="h-full">
               <MotionCard>
-                <MotionCardIcon>
+                <MotionCardIcon tone="dark">
                   <Icon size={20} aria-hidden="true" />
                 </MotionCardIcon>
                 <h3 className="mt-5 font-display text-lg font-semibold text-cream">
                   {title}
                 </h3>
-                <p className="mt-2 text-sm/6 text-cream/55">{desc}</p>
+                <p className="mt-2 text-sm/6 text-cream/70">{desc}</p>
               </MotionCard>
             </Reveal>
           </li>
