@@ -1,11 +1,12 @@
 import type { CSSProperties } from "react";
 
 const CIRCLES = [
-  { x: 8, y: 0, tone: "purple" as const },
-  { x: 1, y: 1, tone: "cream" as const },
-  { x: 10, y: 2, tone: "cream" as const },
-  { x: 3, y: 4, tone: "purple" as const },
-  { x: 9, y: 5, tone: "cream" as const },
+  { x: 0.5, y: 0.5, tone: "purple" as const },
+  { x: 13.5, y: 1, tone: "cream" as const },
+  { x: 0.5, y: 3, tone: "cream" as const },
+  { x: 13.5, y: 4, tone: "purple" as const },
+  { x: 0.5, y: 6.5, tone: "cream" as const },
+  { x: 13.5, y: 7, tone: "cream" as const },
 ];
 
 /** fundo decorativo — coloque dentro de um container com position: relative e overflow: hidden */

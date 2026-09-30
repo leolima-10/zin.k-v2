@@ -78,6 +78,6 @@
     border-radius: 9999px;
     transform: translate(-50%, -50%);
   }
-  .zk-circle--purple { background-color: var(--color-accent); opacity: 0.35; }
+  .zk-circle--purple { background-color: var(--color-accent); opacity: 0.25; }
   .zk-circle--cream { --size: 0.5; background-color: var(--color-cream); opacity: 0.12; }
 }

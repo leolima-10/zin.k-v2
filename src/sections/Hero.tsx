@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowDown, ArrowRight } from "lucide-react";
 import { gradientOrbVariants, scrollIndicatorVariants } from "../lib/animations/variants";
 import { Pattern } from "../components/Pattern";
+import { LogoMark } from "../components/Logo";
 
 /**
  * Partículas CSS flutuantes no fundo do Hero.
@@ -94,7 +95,7 @@ export function Hero() {
         <HeroParticles reduce={reduce} />
       </div>
 
-      <div className="relative mx-auto w-full max-w-6xl px-5 pb-24 pt-32 sm:px-8">
+      <div className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-24 pt-32 sm:px-8">
         {/* Badge "aceitando novos projetos" */}
         <motion.p
           initial={reduce ? false : { opacity: 0, y: 16 }}
@@ -109,26 +110,25 @@ export function Hero() {
           aceitando novos projetos
         </motion.p>
 
-        {/* Título principal com stagger por palavra */}
+        {/* Título principal com stagger: logo + subtítulo */}
         <motion.h1
           initial={reduce ? false : { opacity: 0, y: 28 }}
           animate={reduce ? undefined : { opacity: 1, y: 0 }}
           transition={{
             duration: 0.7,
             delay: 0.2,
-            staggerChildren: 0.04,
+            staggerChildren: 0.08,
             delayChildren: 0.1,
           }}
-          className="mt-8 font-display text-[clamp(3.5rem,11vw,7.5rem)] font-bold leading-[0.95] tracking-tight text-cream"
+          className="mt-8 text-cream"
+          aria-label="zin.k"
         >
-          <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-            zin
-          </motion.span>
-          <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-accent-text">
-            .
-          </motion.span>
-          <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-            k
+          <motion.span
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="block"
+          >
+            <LogoMark variant="dark" size="7xl" className="font-black" />
           </motion.span>
           <motion.span
             initial={{ opacity: 0, y: 16 }}
@@ -146,7 +146,7 @@ export function Hero() {
           initial={reduce ? false : { opacity: 0, y: 28 }}
           animate={reduce ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.35 }}
-          className="mt-6 max-w-xl text-base/7 text-cream/55"
+          className="mt-6 max-w-xl text-base leading-relaxed text-cream/55"
         >
           a zin.k desenha, constrói e mantém sites que carregam rápido,
           posicionam sua marca e viram negócio. sem template, sem enrolação —
