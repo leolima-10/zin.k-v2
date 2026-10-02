@@ -1,6 +1,8 @@
 import { useState, type ChangeEvent, type FormEvent } from "react";
 import {
   ArrowUpRight,
+  Check,
+  Copy,
   Instagram,
   Mail,
   MessageCircle,
@@ -24,13 +26,13 @@ const CHANNELS = [
     icon: Mail,
     title: "e-mail",
     detail: SITE.email,
-    href: `mailto:${SITE.email}`,
+    href: `mailto:${SITE.email}?subject=quero%20um%20site%20com%20a%20zin.k`,
     external: false,
   },
   {
     icon: Instagram,
     title: "instagram",
-    detail: "@zink.digital",
+    detail: SITE.instagramHandle,
     href: SITE.instagramUrl,
     external: true,
   },
@@ -57,12 +59,25 @@ export function Contact() {
     mensagem: "",
   });
   const [sent, setSent] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   function handleChange(
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) {
     const { name, value } = event.target;
     setForm((prev) => ({ ...prev, [name]: value }));
+  }
+
+  function handleCopyEmail(event: React.MouseEvent) {
+    event.preventDefault();
+    event.stopPropagation();
+    navigator.clipboard.writeText(SITE.email).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }).catch(() => {
+      // fallback: open mailto
+      window.location.href = `mailto:${SITE.email}?subject=quero%20um%20site%20com%20a%20zin.k`;
+    });
   }
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -99,14 +114,28 @@ export function Contact() {
                   >
                     <Icon size={20} aria-hidden="true" />
                   </motion.span>
-                  <span>
+                  <span className="flex-1 min-w-0">
                     <span className="block font-display text-base font-semibold text-cream">
                       {title}
                     </span>
-                    <span className="block text-sm text-cream/70">
+                    <span className="block text-sm text-cream/70 truncate">
                       {detail}
                     </span>
                   </span>
+                  {title === "e-mail" && (
+                    <button
+                      type="button"
+                      onClick={handleCopyEmail}
+                      aria-label={copied ? "e-mail copiado" : "copiar e-mail"}
+                      className="ml-2 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-cream/10 text-cream/60 transition-colors hover:border-accent/50 hover:text-accent-text hover:bg-accent/10 focus:outline-none focus:ring-2 focus:ring-accent/50"
+                    >
+                      {copied ? (
+                        <Check size={18} aria-hidden="true" className="text-accent-text" />
+                      ) : (
+                        <Copy size={18} aria-hidden="true" />
+                      )}
+                    </button>
+                  )}
                   <ArrowUpRight
                     size={18}
                     aria-hidden="true"

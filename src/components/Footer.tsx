@@ -14,7 +14,12 @@ const FOOTER_LINKS = [
 ];
 
 const SOCIAL_LINKS = [
-  { label: "instagram", href: SITE.instagramUrl, icon: Instagram },
+  {
+    label: "instagram",
+    href: SITE.instagramUrl,
+    icon: Instagram,
+    handle: SITE.instagramHandle,
+  },
   { label: "linkedin", href: SITE.linkedinUrl, icon: Linkedin },
   { label: "e-mail", href: `mailto:${SITE.email}`, icon: Mail },
 ];
@@ -54,18 +59,25 @@ export function Footer() {
             redes
           </h2>
           <ul className="mt-4 flex gap-3">
-            {SOCIAL_LINKS.map(({ label, href, icon: Icon }) => (
+            {SOCIAL_LINKS.map(({ label, href, icon: Icon, handle }) => (
               <li key={label}>
                 <motion.a
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={label}
+                  aria-label={
+                    label === "instagram"
+                      ? `Instagram da zin.k (${SITE.instagramHandle})`
+                      : label
+                  }
                   whileHover={iconHover}
                   className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-cream/10 text-cream/60 transition-colors hover:border-accent/50 hover:text-accent-text"
                 >
                   <Icon size={18} aria-hidden="true" />
                 </motion.a>
+                {label === "instagram" && handle && (
+                  <span className="sr-only">{handle}</span>
+                )}
               </li>
             ))}
           </ul>

@@ -4,10 +4,11 @@
  * seção de contato leem deste arquivo.
  */
 export const SITE = {
-  email: "contato@zink.digital",
+  email: "zinkcompany.ia@gmail.com",
   whatsappUrl: "https://wa.me/5511999990000",
   whatsappLabel: "+55 11 99999-0000",
-  instagramUrl: "https://instagram.com/zink.digital",
+  instagramUrl: "https://www.instagram.com/zin.kcompany/",
+  instagramHandle: "@zin.kcompany",
   linkedinUrl: "https://linkedin.com/company/zink-digital",
   location: "São Paulo, Brasil",
 } as const;
