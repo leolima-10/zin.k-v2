@@ -10,5 +10,5 @@ export const SITE = {
   instagramUrl: "https://www.instagram.com/zin.kcompany/",
   instagramHandle: "@zin.kcompany",
   linkedinUrl: "https://linkedin.com/company/zink-digital",
-  location: "São Paulo, Brasil",
+  location: "Salvador, Brasil",
 } as const;
