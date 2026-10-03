@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import type { ReactNode } from "react";
 
 type LogoVariant = "dark" | "light" | "purple";
 

@@ -26,11 +26,13 @@ export function Portfolio() {
 
   const filters: { value: Filter; label: string; count: number }[] = [
     { value: "todos", label: "todos", count: projects.length },
-    ...(Object.keys(CATEGORY_LABELS) as ProjectCategory[]).map((category) => ({
-      value: category,
-      label: CATEGORY_LABELS[category],
-      count: counts.get(category) ?? 0,
-    })),
+    ...(Object.keys(CATEGORY_LABELS) as ProjectCategory[])
+      .map((category) => ({
+        value: category as Filter,
+        label: CATEGORY_LABELS[category],
+        count: counts.get(category) ?? 0,
+      }))
+      .filter((f) => f.value === "todos" || f.count > 0),
   ];
 
   const filtered =
