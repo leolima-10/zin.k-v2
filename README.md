@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# zin.k-site
-Portifolio ZIN.K
-=======
 # zin.k — site institucional
 
 site e portfólio da zin.k, startup de sites e soluções digitais.
@@ -20,6 +16,7 @@ outros scripts:
 npm run build      # build de produção (dist/)
 npm run preview    # serve o build localmente
 npm run images     # otimiza screenshots de projetos (ver abaixo)
+npm run previews   # captura screenshots dos projetos reais
 node scripts/ui-check.mjs   # verificação headless da UI (precisa do dev server rodando)
 ```
 
@@ -39,8 +36,10 @@ public/
 └── images/projects/   # previews otimizados (.webp)
 raw-images/            # screenshots originais (não commita; .gitignored)
 scripts/
-├── optimize-images.mjs  # converte raw-images/ → public/images/projects/*.webp
-└── ui-check.mjs         # smoke test headless da UI (playwright + chrome)
+├── capture-previews.mjs  # captura screenshots dos sites reais
+├── optimize-images.mjs   # converte raw-images/ → public/images/projects/*.webp
+├── ui-check.mjs          # smoke test headless da UI (playwright + chrome)
+└── verify-catalog.mjs    # validação automática do catálogo
 ```
 
 ## ★ como adicionar um novo projeto ao portfólio
@@ -100,4 +99,3 @@ o `vercel.json` já cuida do rewrite de SPA (rotas como `/projetos/:slug`).
 
 **netlify:** build `npm run build`, publish directory `dist/`.
 o `public/_redirects` (`/* /index.html 200`) já cobre o roteamento de SPA.
->>>>>>> 406ea5a (primeiro commit)
