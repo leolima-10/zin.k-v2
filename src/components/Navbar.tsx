@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowUpRight, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Logo } from "./Logo";
+import { WhatsAppLink } from "./WhatsAppLink";
+import { WhatsAppIcon } from "./WhatsAppIcon";
+import { buildWhatsAppUrl, WA_MESSAGES } from "../lib/whatsapp";
 
 const NAV_LINKS = [
   { label: "Serviços", hash: "#servicos" },
@@ -24,8 +27,10 @@ export function Navbar() {
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
+    document.body.dataset.mobileMenuOpen = open ? "true" : "false";
     return () => {
       document.body.style.overflow = "";
+      document.body.dataset.mobileMenuOpen = "false";
     };
   }, [open]);
 
@@ -53,10 +58,14 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Link to="/#contato" className="btn-primary">
-            Fale com a gente
-            <ArrowUpRight size={16} aria-hidden="true" />
-          </Link>
+          <WhatsAppLink
+            message={WA_MESSAGES.default()}
+            srContext="falar no whatsapp"
+            className="btn-primary flex items-center gap-2"
+          >
+            <WhatsAppIcon size={16} aria-hidden="true" />
+            Falar no WhatsApp
+          </WhatsAppLink>
         </div>
 
         <button
@@ -90,14 +99,15 @@ export function Navbar() {
                   {link.label}
                 </Link>
               ))}
-              <Link
-                to="/#contato"
+              <WhatsAppLink
+                message={WA_MESSAGES.default()}
+                srContext="falar no whatsapp"
                 onClick={() => setOpen(false)}
-                className="btn-primary mt-3"
+                className="btn-primary mt-3 flex items-center justify-center gap-2"
               >
-                Fale com a gente
-                <ArrowUpRight size={16} aria-hidden="true" />
-              </Link>
+                <WhatsAppIcon size={16} aria-hidden="true" />
+                Falar no WhatsApp
+              </WhatsAppLink>
             </div>
           </motion.div>
         )}

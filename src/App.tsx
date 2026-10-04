@@ -4,6 +4,7 @@ import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { ScrollManager } from "./components/ScrollManager";
 import { ScrollProgress } from "./components/ScrollProgress";
+import { WhatsAppFab } from "./components/WhatsAppFab";
 import { Home } from "./pages/Home";
 import { ProjectPage } from "./pages/ProjectPage";
 import { NotFound } from "./pages/NotFound";
@@ -24,7 +25,7 @@ export function App() {
         <ScrollManager />
         <ScrollProgress />
         <Navbar />
-        <main id="conteudo">
+        <main id="conteudo" className="min-h-[calc(100vh-200px)]">
           <AnimatePresence mode="wait" initial={false}>
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<Home />} />
@@ -34,6 +35,7 @@ export function App() {
           </AnimatePresence>
         </main>
         <Footer />
+        <WhatsAppFab />
       </>
     </MotionConfig>
   );

@@ -1,9 +1,12 @@
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowDown, ArrowRight } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { gradientOrbVariants, scrollIndicatorVariants } from "../lib/animations/variants";
 import { Pattern } from "../components/Pattern";
 import { LogoMark } from "../components/Logo";
+import { WhatsAppLink } from "../components/WhatsAppLink";
+import { WhatsAppIcon } from "../components/WhatsAppIcon";
+import { buildWhatsAppUrl, WA_MESSAGES } from "../lib/whatsapp";
 
 /**
  * Partículas CSS flutuantes no fundo do Hero.
@@ -160,10 +163,14 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.5 }}
           className="mt-10 flex flex-wrap items-center gap-4"
         >
-          <Link to="/#contato" className="btn-primary">
-            Fale com a gente
-            <ArrowRight size={16} aria-hidden="true" />
-          </Link>
+          <WhatsAppLink
+            message={WA_MESSAGES.default()}
+            srContext="falar no whatsapp"
+            className="btn-primary flex items-center gap-2"
+          >
+            <WhatsAppIcon size={16} aria-hidden="true" />
+            Falar no WhatsApp
+          </WhatsAppLink>
           <Link to="/#portfolio" className="btn-secondary">
             Ver projetos
             <ArrowDown size={16} aria-hidden="true" />

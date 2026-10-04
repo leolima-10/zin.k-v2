@@ -7,6 +7,9 @@ import { CATEGORY_LABELS, getProject } from "../data/projects";
 import { Reveal } from "../components/Reveal";
 import { NotFound } from "./NotFound";
 import { pageVariants, imageRevealVariants, imageRevealTransition, staggerContainer, staggerItem } from "../lib/animations/variants";
+import { WhatsAppLink } from "../components/WhatsAppLink";
+import { WhatsAppIcon } from "../components/WhatsAppIcon";
+import { buildWhatsAppUrl, WA_MESSAGES } from "../lib/whatsapp";
 
 export function ProjectPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -206,9 +209,14 @@ export function ProjectPage() {
                     a gente cria uma solução sob medida pro seu negócio — do
                     briefing ao ar.
                   </p>
-                  <Link to="/#contato" className="btn-primary mt-4 w-full">
-                    Fale com a gente
-                  </Link>
+                  <WhatsAppLink
+                    message={WA_MESSAGES.project(project.title)}
+                    srContext={`quero um site como ${project.title}`}
+                    className="btn-primary mt-4 w-full flex items-center justify-center gap-2"
+                  >
+                    <WhatsAppIcon size={16} aria-hidden="true" />
+                    Quero um site assim
+                  </WhatsAppLink>
                 </motion.div>
               </Reveal>
             </aside>

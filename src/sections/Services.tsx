@@ -9,6 +9,9 @@ import {
 import { Section } from "../components/Section";
 import { Reveal } from "../components/Reveal";
 import { MotionCard, MotionCardIcon } from "../components/MotionCard";
+import { WhatsAppLink } from "../components/WhatsAppLink";
+import { WhatsAppIcon } from "../components/WhatsAppIcon";
+import { buildWhatsAppUrl, WA_MESSAGES } from "../lib/whatsapp";
 
 const SERVICES = [
   {
@@ -65,6 +68,14 @@ export function Services() {
                     {title}
                   </h3>
                   <p className="mt-2 text-sm/6 !text-cream/70">{desc}</p>
+                  <WhatsAppLink
+                    message={WA_MESSAGES.service(title)}
+                    srContext={`pedir orçamento de ${title}`}
+                    className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-accent-text hover:text-cream transition-colors"
+                  >
+                    <WhatsAppIcon size={14} aria-hidden="true" />
+                    Pedir orçamento
+                  </WhatsAppLink>
                 </MotionCard>
               </Reveal>
             </li>

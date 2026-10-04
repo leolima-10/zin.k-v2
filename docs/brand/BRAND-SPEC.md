@@ -40,3 +40,7 @@
 - Não adicionar "apps" como serviço novo.
 - Não mexer em componentes não usados (ContactButton, LiveProjectButton, Skeleton, LoadingSpinner, AnimatedText, Magnet, FadeIn, Marquee).
 - Não trocar e-mail/whatsapp/instagram em src/data/site.ts.
+
+## WhatsApp oficial (atualizado na implementação)
+- Número: +55 71 99963-6519 (link: 5571999636519)
+- Fonte única: src/data/site.ts → helper src/lib/whatsapp.ts (buildWhatsAppUrl, WA_MESSAGES)

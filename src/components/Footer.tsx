@@ -4,6 +4,9 @@ import { Instagram, Linkedin, Mail } from "lucide-react";
 import { Logo } from "./Logo";
 import { SITE } from "../data/site";
 import { iconHover } from "../lib/animations/variants";
+import { WhatsAppLink } from "./WhatsAppLink";
+import { WhatsAppIcon } from "./WhatsAppIcon";
+import { buildWhatsAppUrl } from "../lib/whatsapp";
 
 const FOOTER_LINKS = [
   { label: "quem somos", hash: "#quem-somos" },
@@ -27,7 +30,7 @@ const SOCIAL_LINKS = [
 export function Footer() {
   return (
     <footer className="border-t border-cream/10">
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-5 py-12 sm:px-8 md:flex-row md:items-start md:justify-between">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-5 py-12 sm:px-8 md:flex-row md:items-start md:justify-between pb-64 md:pb-12">
         <div className="max-w-xs">
           <Logo />
           <p className="mt-4 text-sm/6 text-cream/50">
@@ -58,7 +61,16 @@ export function Footer() {
           <h2 className="font-display text-sm font-semibold text-cream">
             redes
           </h2>
-          <ul className="mt-4 flex gap-3">
+          <ul className="mt-4 flex flex-col gap-3 sm:flex-row">
+            <li>
+              <WhatsAppLink
+                srContext="whatsapp"
+                className="inline-flex items-center gap-2 h-10 w-auto px-3 rounded-lg border border-cream/10 text-cream/60 transition-colors hover:border-accent/50 hover:text-accent-text"
+              >
+                <WhatsAppIcon size={18} aria-hidden="true" className="shrink-0" />
+                <span className="font-medium">{SITE.whatsappLabel}</span>
+              </WhatsAppLink>
+            </li>
             {SOCIAL_LINKS.map(({ label, href, icon: Icon, handle }) => (
               <li key={label}>
                 <motion.a

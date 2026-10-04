@@ -5,8 +5,9 @@
  */
 export const SITE = {
   email: "zinkcompany.ia@gmail.com",
-  whatsappUrl: "https://wa.me/5511999990000",
-  whatsappLabel: "+55 11 99999-0000",
+  whatsappNumber: "5571999636519",
+  whatsappLabel: "+55 71 99963-6519",
+  whatsappDefaultMessage: "oi, zin.k! vim pelo site e quero conversar sobre um projeto.",
   instagramUrl: "https://www.instagram.com/zin.kcompany/",
   instagramHandle: "@zin.kcompany",
   linkedinUrl: "https://linkedin.com/company/zink-digital",

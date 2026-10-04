@@ -2,6 +2,9 @@ import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import { pageVariants, gradientOrbVariants } from "../lib/animations/variants";
+import { WhatsAppLink } from "../components/WhatsAppLink";
+import { WhatsAppIcon } from "../components/WhatsAppIcon";
+import { buildWhatsAppUrl, WA_MESSAGES } from "../lib/whatsapp";
 
 /**
  * Partículas flutuantes extras para a página 404
@@ -121,6 +124,15 @@ export function NotFound() {
           o link pode estar quebrado ou a página saiu do ar. mas a home tá a um
           clique daqui.
         </motion.p>
+
+        <WhatsAppLink
+          message={WA_MESSAGES.default()}
+          srContext="falar no whatsapp"
+          className="mt-4 inline-flex items-center gap-2 text-sm text-cream/50 hover:text-cream transition-colors"
+        >
+          <WhatsAppIcon size={16} aria-hidden="true" />
+          ou fale conosco no whatsapp
+        </WhatsAppLink>
 
         <motion.div
           initial={{ opacity: 0, y: 28 }}

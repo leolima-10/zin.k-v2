@@ -26,7 +26,7 @@ node scripts/ui-check.mjs   # verificação headless da UI (precisa do dev serve
 src/
 ├── data/
 │   ├── projects.ts    ← ★ catálogo do portfólio (edite aqui)
-│   └── site.ts        ← contatos: whatsapp, e-mail, redes
+│   └── site.ts        ← contatos: whatsappNumber, whatsappLabel, e-mail, redes
 ├── components/        # navbar, footer, section, reveal, logo…
 ├── sections/          # hero, about, services, portfolio, process, contact
 ├── pages/             # home, project page (/projetos/:slug), 404
@@ -87,7 +87,7 @@ scripts/
 ## personalização rápida
 
 - **cores/efeitos:** variáveis em `@theme` no `src/index.css`
-- **contatos/canais:** `src/data/site.ts` (whatsapp, e-mail, instagram, linkedin)
+- **contatos/canais:** `src/data/site.ts` (whatsappNumber, whatsappLabel, whatsappDefaultMessage, e-mail, instagram, linkedin) + helper `src/lib/whatsapp.ts` (buildWhatsAppUrl, WA_MESSAGES)
 - **meta tags/SEO:** `index.html` — troque `og:image` por uma URL absoluta
   (ex.: `https://seudominio.com.br/images/og.jpg`) ao publicar
 - **favicon:** `public/favicon.svg`

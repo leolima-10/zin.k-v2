@@ -81,3 +81,20 @@
   .zk-circle--purple { background-color: var(--color-accent); opacity: 0.25; }
   .zk-circle--cream { --size: 0.5; background-color: var(--color-cream); opacity: 0.12; }
 }
+
+@layer components {
+  @keyframes fab-in {
+    from { opacity: 0; transform: translateY(16px) scale(0.9); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  .animate-fab-in { animation: fab-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fab-in { animation: none; opacity: 1; transform: none; }
+  }
+
+  /* Ocultar FAB quando menu mobile aberto */
+  body[data-mobile-menu-open="true"] [data-testid="whatsapp-fab"] {
+    display: none !important;
+  }
+}
