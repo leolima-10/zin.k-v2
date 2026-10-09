@@ -9,6 +9,7 @@ import { buildWhatsAppUrl, WA_MESSAGES } from "../lib/whatsapp";
 
 const NAV_LINKS = [
   { label: "Serviços", hash: "#servicos" },
+  { label: "Preços", hash: "#precos" },
   { label: "Portfólio", hash: "#portfolio" },
   { label: "Processo", hash: "#processo" },
   { label: "Contato", hash: "#contato" },

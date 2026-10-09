@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Hero } from "../sections/Hero";
 import { About } from "../sections/About";
 import { Services } from "../sections/Services";
+import { Pricing } from "../sections/Pricing";
 import { Portfolio } from "../sections/Portfolio";
 import { Process } from "../sections/Process";
 import { CtaBand } from "../sections/CtaBand";
@@ -14,6 +15,7 @@ export function Home() {
       <Hero />
       <About />
       <Services />
+      <Pricing />
       <Portfolio />
       <Process />
       <CtaBand />
